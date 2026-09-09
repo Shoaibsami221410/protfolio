@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Subway Runner</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="game-container">
+        <canvas id="gameCanvas"></canvas>
+        
+        <!-- UI Overlay -->
+        <div id="ui-overlay">
+            <div id="score-display">
+                <div id="coins">🪙 <span id="coin-count">0</span></div>
+                <div id="score">Score: <span id="score-value">0</span></div>
+                <div id="distance">Distance: <span id="distance-value">0</span>m</div>
+            </div>
+            <div id="powerup-indicator"></div>
+        </div>
+
+        <!-- Start Screen -->
+        <div id="start-screen" class="screen">
+            <h1>🏃 SUBWAY RUNNER 🚃</h1>
+            <p>Dodge trains, collect coins, run forever!</p>
+            <div class="controls-info">
+                <p><strong>Controls:</strong></p>
+                <p>← → or A/D: Switch lanes</p>
+                <p>↑ or W or Space: Jump</p>
+                <p>↓ or S: Roll/Slide</p>
+                <p>On mobile: Swipe!</p>
+            </div>
+            <button id="start-btn" class="game-btn">START GAME</button>
+            <p id="high-score-display">High Score: <span id="high-score">0</span></p>
+        </div>
+
+        <!-- Pause Screen -->
+        <div id="pause-screen" class="screen hidden">
+            <h2>PAUSED</h2>
+            <button id="resume-btn" class="game-btn">RESUME</button>
+            <button id="quit-btn" class="game-btn">QUIT</button>
+        </div>
+
+        <!-- Game Over Screen -->
+        <div id="gameover-screen" class="screen hidden">
+            <h2>GAME OVER</h2>
+            <p>Score: <span id="final-score">0</span></p>
+            <p>Coins: <span id="final-coins">0</span></p>
+            <p>Distance: <span id="final-distance">0</span>m</p>
+            <p id="new-high-score" class="hidden">🎉 NEW HIGH SCORE! 🎉</p>
+            <button id="retry-btn" class="game-btn">PLAY AGAIN</button>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/input.js"></script>
+    <script src="js/renderer.js"></script>
+    <script src="js/player.js"></script>
+    <script src="js/obstacle.js"></script>
+    <script src="js/coin.js"></script>
+    <script src="js/powerup.js"></script>
+    <script src="js/game.js"></script>
+</body>
+</html>
