@@ -11,7 +11,7 @@ export const homepageSchema = z.object({
   hero_cta_secondary_text: z.string().min(1, "Secondary CTA text is required"),
   hero_cta_secondary_url: z.string().min(1, "Secondary CTA URL is required"),
   hero_profile_image_id: z.string().optional().nullable(),
-  hero_visibility: z.boolean().default(true),
+  hero_visibility: z.boolean(),
 });
 
 export type HomepageInput = z.infer<typeof homepageSchema>;
